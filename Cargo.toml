@@ -12,5 +12,9 @@ lto = true # Enables link to optimizations
 opt-level = "z" # Optimize for binary size
 strip = true # Remove debug symbols
 
+[[bin]]
+name = "harmony_link_client"
+path = "src/main.rs"
+
 [dependencies]
 libloading = "0.8.0"

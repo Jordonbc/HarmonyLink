@@ -29,4 +29,7 @@ fn main() {
             fs::copy(&path, &dest_path).expect("copy failed");
         }
     }
+
+    println!("cargo:rustc-env=RUSTFLAGS=-C link-arg=-Wl,-rpath,$ORIGIN");
+    println!("cargo:rerun-if-changed=src/main.rs");
 }
