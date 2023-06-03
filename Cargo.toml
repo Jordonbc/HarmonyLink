@@ -1,5 +1,5 @@
 [package]
-name = "harmony_link_test"
+name = "harmony_link_client"
 version = "0.1.0"
 edition = "2021"
 
