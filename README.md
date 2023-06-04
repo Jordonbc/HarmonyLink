@@ -31,6 +31,10 @@ Developers and modders can easily implement GET and POST requests from the API, 
 
 Please note that while the DLL is currently closed-source, we're open to making it open-source if it gains popularity. We're excited to see how the project evolves with community engagement.
 
+## HarmonyLink: View
+
+To view the API in action, check out [HarmonyLink: View](https://github.com/Jordonbc/HarmonyLinkView). This sister project provides a comprehensive interface to see what the API is doing in real-time.
+
 ## Showcasing HarmonyLink
 
 To help visualize its functionality, we've included a demonstration video that showcases HarmonyLink in action on a Steam Deck in desktop mode. (Insert link to video here)
