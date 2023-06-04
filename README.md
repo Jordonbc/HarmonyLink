@@ -1,34 +1,42 @@
-# HarmonyLink: The Handheld Game Link
-HarmonyLink is a powerful plugin designed to bridge the gap between your favorite game engines and handheld gaming devices. Initially focusing on the Steam Deck, HarmonyLink aims to provide seamless integration with a variety of handheld devices, enabling games to access critical system metrics and offer a more personalized, immersive gaming experience.
+# HarmonyLink: Client
+
+Welcome to the client-side application for the HarmonyLink project. This innovative software is developed with the Rust programming language and is aimed at enhancing the handheld gaming experience. The main function of this client is to run the DLL which is currently closed-source.
+
+## License
+
+This project is licensed under the GNU General Public License v3.0 or later.
+
+## The Vision and The Reality
+
+The central goal with HarmonyLink is to provide a comprehensive and interactive gaming experience on handheld devices. This client-side application is a crucial part of this vision.
 
 ## Key Features
-- Device Identification: HarmonyLink allows games to recognize the specific handheld device they are running on.
 
-- User-Set Power Limits: HarmonyLink provides access to user-defined power limits, allowing games to adapt and optimize performance based on these constraints.
+1. **Device Identification**: HarmonyLink equips games with the ability to identify the specific handheld device they are operating on.
+2. **Real-Time Metrics**: Games can access real-time data about the handheld device's power usage and docking status through HarmonyLink.
+3. **Cross-Platform Compatibility**: HarmonyLink extends its functionality to Windows games running on Proton/Wine.
 
-- Real-Time Metrics: With HarmonyLink, games can access real-time information about the handheld device's power usage and docking status, enabling a level of interaction and responsiveness previously unattainable.
+## How It Works
 
-- Cross-Platform Compatibility: Although initial development focuses on Unreal Engine and the Steam Deck, HarmonyLink is designed with the future in mind. We plan to extend compatibility to other game engines like Unity and more handheld devices.
+HarmonyLink operates using a client-server structure. This client-side application runs the DLL on the host side (native Linux or Windows), and games access the metrics via an API.
+
+Developers and modders can easily implement GET and POST requests from the API, integrating system metrics into games. These metrics can be used to adapt the game's quality settings, providing a more customized gaming experience.
 
 ## Getting Started
-To compile HarmonyLink for Unreal Engine, follow these steps:
 
-> NOTE: This guide assumes that you have a basic understanding of using Unreal Engine and its plugin system.
+1. Clone the repository: `git clone https://github.com/Jordonbc/HarmonyLinkClient.git`
+2. Navigate into the directory: `cd HarmonyLinkClient`
+3. Build the project: `cargo build`
+4. Run the project: `cargo run`
 
-1. Clone the repository to your local machine.
-2. Navigate to the directory containing the .uproject file of your Unreal Engine project.
-3. Create a "Plugins" folder if it doesn't already exist.
-4. Copy the "HarmonyLink" folder into the "Plugins" folder.
-5. Open your Unreal Engine project. You'll be prompted to build missing modules.
-6. Click "Yes" to rebuild now.
+Please note that while the DLL is currently closed-source, we're open to making it open-source if it gains popularity. We're excited to see how the project evolves with community engagement.
 
-## Get Involved
-HarmonyLink is a community-driven project and we welcome contributions of all kinds:
+## Showcasing HarmonyLink
 
-- Bug Reports: Found a problem? Let us know so we can fix it!
-- Feature Suggestions: Have an idea for improving HarmonyLink? We'd love to hear it.
-- Code Contributions: Want to get your hands dirty? Feel free to make a pull request. For major changes, please open an issue first to discuss what you'd like to change.
+To help visualize its functionality, we've included a demonstration video that showcases HarmonyLink in action on a Steam Deck in desktop mode. (Insert link to video here)
 
-Before contributing, please make sure to read our Contributing Guide and Code of Conduct.
+## Conclusion
 
-Join us as we revolutionize the handheld gaming experience. Whether you're a game developer aiming to optimize your game for handheld devices or a gamer looking forward to more immersive and responsive handheld games, HarmonyLink is the plugin you've been waiting for.
+HarmonyLink is a significant step towards revolutionizing the handheld gaming experience. Whether you're a game developer aiming to optimize your games for handheld devices or a gamer seeking a more personalized handheld gaming experience, HarmonyLink might just be what you've been waiting for.
+
+We welcome your feedback, questions, and suggestions. Feel free to raise an issue or submit a pull request. Happy coding and game on!
