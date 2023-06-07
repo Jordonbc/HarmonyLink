@@ -1,10 +1,6 @@
-# HarmonyLink: Client
+# HarmonyLink: Server
 
-Welcome to the client-side application for the HarmonyLink project. This innovative software is developed with the Rust programming language and is aimed at enhancing the handheld gaming experience. The main function of this client is to run the DLL which is currently closed-source.
-
-## License
-
-This project is licensed under the GNU General Public License v3.0 or later.
+Welcome to the server-side application for the HarmonyLink project. This innovative software is developed with the Rust programming language and is aimed at enhancing the handheld gaming experience. The main function of this application is to run the DLL which is currently closed-source.
 
 ## The Vision and The Reality
 
@@ -18,14 +14,16 @@ The central goal with HarmonyLink is to provide a comprehensive and interactive 
 
 ## How It Works
 
-HarmonyLink operates using a client-server structure. This client-side application runs the DLL on the host side (native Linux or Windows), and games access the metrics via an API.
+HarmonyLink operates using a client-server structure. This server-side application runs the DLL on the host side (native Linux or Windows), and games access the metrics via an API.
 
 Developers and modders can easily implement GET and POST requests from the API, integrating system metrics into games. These metrics can be used to adapt the game's quality settings, providing a more customized gaming experience.
 
 ## Getting Started
 
-1. Clone the repository: `git clone https://github.com/Jordonbc/HarmonyLinkClient.git`
-2. Navigate into the directory: `cd HarmonyLinkClient`
+This project assumes that you already know how to compile and run Rust applications.
+
+1. Clone the repository: `git clone https://github.com/Jordonbc/HarmonyLinkServer.git`
+2. Navigate into the directory: `cd HarmonyLinkServer`
 3. Build the project: `cargo build`
 4. Run the project: `cargo run`
 
@@ -44,3 +42,7 @@ To help visualize its functionality, we've included a demonstration video that s
 HarmonyLink is a significant step towards revolutionizing the handheld gaming experience. Whether you're a game developer aiming to optimize your games for handheld devices or a gamer seeking a more personalized handheld gaming experience, HarmonyLink might just be what you've been waiting for.
 
 We welcome your feedback, questions, and suggestions. Feel free to raise an issue or submit a pull request. Happy coding and game on!
+
+## License
+
+This project is licensed under the GNU General Public License v3.0 or later.
