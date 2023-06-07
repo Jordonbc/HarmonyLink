@@ -1,5 +1,5 @@
 [package]
-name = "harmony_link_client"
+name = "harmony_link_server"
 version = "0.1.0"
 edition = "2021"
 
@@ -13,7 +13,7 @@ opt-level = "z" # Optimize for binary size
 strip = true # Remove debug symbols
 
 [[bin]]
-name = "harmony_link_client"
+name = "harmony_link_server"
 path = "src/main.rs"
 
 [dependencies]
