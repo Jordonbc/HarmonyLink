@@ -19,6 +19,8 @@ jobs:
             archive: tar.gz
     steps:
       - uses: actions/checkout@master
+        with:
+          ssh-key: "${{secrets.RELEASE_KEY}}"
       - uses: Swatinem/rust-cache@v2
         with:
           # The prefix cache key, this can be changed to start a new cache manually.
