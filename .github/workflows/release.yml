@@ -1,10 +1,6 @@
 # .github/workflows/release.yml
 
 on:
-  push:
-    tags:
-        - 'release*'
-        - 'V*'
   release:
     types: [created]
 
