@@ -1,6 +1,6 @@
 # HarmonyLink: Server
 
-Welcome to the server-side application for the HarmonyLink project. This innovative software is developed with the Rust programming language and is aimed at enhancing the handheld gaming experience. The main function of this application is to run the DLL which is currently closed-source.
+Welcome to the server-side application for the HarmonyLink project. This innovative software is developed with the Rust programming language and is aimed at enhancing the handheld gaming experience. The main function of this application is to run the DLL which is currently closed-source. If this project becomes popular enough, I will reconsider the licensing of the DLL and release it opensource.
 
 ## The Vision and The Reality
 
