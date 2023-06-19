@@ -1,4 +1,6 @@
-# HarmonyLink: Server
+<p align="center">
+  <img src="Images/HarmonyLinkLogo.png" alt="HarmonyLinkLogo"/>
+</p>
 
 Welcome to the server-side application for the HarmonyLink project. This innovative software is developed with the Rust programming language and is aimed at enhancing the handheld gaming experience. The main function of this application is to run the DLL which is currently closed-source. If this project becomes popular enough, I will reconsider the licensing of the DLL and release it opensource.
 
@@ -35,7 +37,7 @@ To view the API in action, check out [HarmonyLink: View](https://github.com/Jord
 
 ## Showcasing HarmonyLink
 
-To help visualize its functionality, we've included a demonstration video that showcases HarmonyLink in action on a Steam Deck in desktop mode. (Insert link to video here)
+To help visualize its functionality, we've included a demonstration video that showcases HarmonyLink in action on a Steam Deck in gamemode. [https://www.youtube.com/watch?v=Uttf-lcE-Jk](https://www.youtube.com/watch?v=Uttf-lcE-Jk)
 
 ## Conclusion
 
