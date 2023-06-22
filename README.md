@@ -16,7 +16,7 @@ The central goal with HarmonyLink is to provide a comprehensive and interactive 
 
 ## How It Works
 
-HarmonyLink operates using a client-server structure. This server-side application runs the DLL on the host side (native Linux or Windows), and games access the metrics via an API.
+HarmonyLink operates using a client-server structure. This server-side application runs on the host side (native Linux or Windows), and games access the metrics via an API.
 
 Developers and modders can easily implement GET and POST requests from the API, integrating system metrics into games. These metrics can be used to adapt the game's quality settings, providing a more customized gaming experience.
 
