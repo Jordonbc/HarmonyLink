@@ -29,8 +29,6 @@ This project assumes that you already know how to compile and run Rust applicati
 3. Build the project: `cargo build`
 4. Run the project: `cargo run`
 
-Please note that while the DLL is currently closed-source, we're open to making it open-source if it gains popularity. We're excited to see how the project evolves with community engagement.
-
 ## HarmonyLink: View
 
 To view the API in action, check out [HarmonyLink: View](https://github.com/Jordonbc/HarmonyLinkView). This sister project provides a comprehensive interface to see what the API is doing in real-time.
