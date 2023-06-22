@@ -1,7 +1,11 @@
 [package]
 name = "harmony_link_server"
-version = "1.0.0"
+version = "0.1.0"
 edition = "2021"
+authors = ["Jordon jordon@jordongamedev.co.uk"]
+homepage = "https://jordongamedev.co.uk"
+repository = "https://github.com/Jordonbc/HarmonyLinkServer"
+license = "GPL-3.0-or-later"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
@@ -12,9 +16,27 @@ lto = true # Enables link to optimizations
 opt-level = "z" # Optimize for binary size
 strip = true # Remove debug symbols
 
+[package.metadata.winres]
+LegalCopyright = "Copyright © 2023 Jordon Brooks"
+ProductName = "HarmonyLink: Server"
+FileDescription = "Optimized games for your handheld!"
+
 [[bin]]
 name = "harmony_link_server"
 path = "src/main.rs"
 
+[build-dependencies]
+vergen = { version = "8.2.1", features = ["build", "cargo", "git", "gitcl", "rustc", "si"] }
+winres = "0.1.12"
+
 [dependencies]
-libloading = "0.8.0"
+actix-web = "4.3.1"
+env_logger = "0.10.0"
+log = "0.4.18"
+serde = {version = "1.0.163", features = ["derive"]}
+serde_json = "1.0.96"
+sysinfo = "0.29.0"
+os_info = "3.0"
+battery = "0.7.8"
+lazy_static = "1.4.0"
+rusb = "0.9.2"

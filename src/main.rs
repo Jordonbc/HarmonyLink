@@ -1,34 +1,36 @@
-extern crate libloading;
+mod battery;
+mod docking;
+mod os;
+
+mod version;
+use version::info::Version;
+
+mod api;
+
+static PORT: u16 = 9000;
+
+static USE_FALLBACK_DOCK_DETECTION: bool = false;
 
 fn main() {
-    // Use `cfg!` macro to detect OS
-    let lib_path = if cfg!(target_os = "windows") {
-        "harmony_link_core.dll"
-    } else if cfg!(target_os = "linux") {
-        "libharmony_link_core.so"
-    } else {
-        eprintln!("Unsupported OS");
-        return;
-    };
+    let version_info = Version::get();
 
-    let lib = unsafe { match libloading::Library::new(lib_path) {
-        Ok(lib) => lib,
-        Err(err) => {
-            eprintln!("Error loading dynamic library: {}", err);
-            return;
-        },
-    }
-    };
+    println!("Version: {}", version_info.version);
+    println!("Build Timestamp: {}", version_info.build_timestamp);
+    println!("Git Branch: {}", version_info.git_branch);
+    println!("Git Describe: {}", version_info.git_describe);
+    println!("Git Commit Timestamp: {}", version_info.git_commit_timestamp);
+    println!("Debug Build: {}", version_info.debug);
+    println!("\n\n");
 
-    unsafe {
-        let func: libloading::Symbol<unsafe extern "C" fn()> = match lib.get(b"start") {
-            Ok(func) => func,
-            Err(err) => {
-                eprintln!("Error finding function in dynamic library: {}", err);
-                return;
-            }
-        };
-        
-        func();
-    }
+    println!("HarmonyLink ©️ Jordon Brooks 2023");
+    
+
+    let sys = actix_web::rt::System::new();
+    sys.block_on(async {
+        let result = api::server::start_actix_web (PORT).await;
+        match result {
+            Ok(_) => println!("Webserver started successfully."),
+            Err(e) => println!("Error starting actix_web: {}", e),
+        }
+    });
 }
