@@ -1,4 +1,7 @@
-use std::{io::BufReader, fs::File, collections::HashSet};
+use std::{io::BufReader, fs::File};
+
+#[allow(unused_imports)]
+use std::collections::hash_set;
 
 use crate::{battery::{stats::get_battery_info, structs::ChargingStatus}, USE_FALLBACK_DOCK_DETECTION};
 
@@ -33,6 +36,7 @@ pub fn get_dock_info() -> Result<DockInfo, Box<dyn std::error::Error>> {
 }
 
 /* Reads the dock_models.json file and returns a vector of structs with the data */
+#[allow(dead_code)]
 pub fn read_dock_models_from_file() -> Result<Vec<Dock>, Box<dyn std::error::Error>> {
     let file = File::open("Resources/dock_models.json")?;
     let reader = BufReader::new(file);
