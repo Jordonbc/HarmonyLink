@@ -2,14 +2,18 @@ use actix_web::HttpServer;
 
 use crate::api::endpoints::*;
 
-pub async fn start_actix_web(port: u16) -> std::io::Result<()> {
+#[allow(dead_code)]
+pub async fn stop_actix_web(server: actix_web::dev::Server) -> std::io::Result<()> {
+    println!("Stopping server.");
+    server.handle().stop(true).await;
+    Ok(())
+}
 
-    //std::env::set_var("RUST_LOG", "debug");
-    //std::env::set_var("RUST_BACKTRACE", "1");
+pub fn start_actix_web(port: u16) -> std::io::Result<actix_web::dev::Server> {
 
     println!("Starting webserver on 127.0.0.1:{}", port);
 
-    HttpServer::new(move || {
+    let server = HttpServer::new(move || {
         let logger = actix_web::middleware::Logger::default();
         actix_web::App::new()
         .wrap(logger)
@@ -21,6 +25,7 @@ pub async fn start_actix_web(port: u16) -> std::io::Result<()> {
         .service(get_dock_info)
     })
     .bind(("127.0.0.1", port))?
-    .run()
-    .await
+    .run();
+
+    Ok(server)
 }
