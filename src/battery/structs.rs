@@ -1,13 +1,13 @@
 use serde::{Deserialize, Serialize};
 
-#[derive(Deserialize, Serialize, PartialEq)]
+#[derive(Deserialize, Serialize, PartialEq, Clone)]
 pub enum ChargingStatus {
     Charging,
     Battery,
     UNKNOWN,
 }
 
-#[derive(Deserialize, Serialize)]
+#[derive(Deserialize, Serialize, Clone)]
 pub struct BatteryInfo {
     pub has_battery: bool,
     pub battery_percent: i8,
@@ -21,5 +21,8 @@ impl BatteryInfo {
             battery_percent: 0,
             charging_status: ChargingStatus::UNKNOWN
         }
+    }
+    pub fn to_string(self) -> String {
+        serde_json::to_string(&self).expect("Failed to parse into string")
     }
 }

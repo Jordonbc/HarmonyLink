@@ -1,6 +1,6 @@
 use serde::{Deserialize, Serialize};
 
-#[derive(Deserialize, Serialize)]
+#[derive(Deserialize, Serialize, Clone)]
 pub struct Version {
     pub build_timestamp: String,
     pub git_branch: String,
@@ -28,5 +28,8 @@ impl Version {
         version_patch: env!("CARGO_PKG_VERSION_PATCH").parse().unwrap(),
         version_pre: env!("CARGO_PKG_VERSION_PRE").parse().unwrap()
         }
+    }
+    pub fn to_string(self) -> String {
+        serde_json::to_string(&self).expect("Failed to parse into string")
     }
 }

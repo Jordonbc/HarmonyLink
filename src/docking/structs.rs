@@ -1,6 +1,6 @@
 use serde::{Deserialize, Serialize};
 
-#[derive(Deserialize, Serialize)]
+#[derive(Deserialize, Serialize, Clone)]
 pub struct Dock {
     pub brand: String, // ex: JSAUX
     pub model: String, // ex: HB0603
@@ -14,9 +14,12 @@ impl Dock {
             usb_ids: vec![],
         }
     }
+    pub fn to_string(self) -> String {
+        serde_json::to_string(&self).expect("Failed to parse into string")
+    }
 }
 
-#[derive(Deserialize, Serialize)]
+#[derive(Deserialize, Serialize, Clone)]
 pub struct DockInfo {
     pub dock_info: Dock,
     pub is_docked: bool,
@@ -29,5 +32,8 @@ impl DockInfo {
             is_docked: false,
             fallback_detection: false
         }
+    }
+    pub fn to_string(self) -> String {
+        serde_json::to_string(&self).expect("Failed to parse into string")
     }
 }

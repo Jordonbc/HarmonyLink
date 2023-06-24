@@ -1,4 +1,4 @@
 pub mod server;
-mod endpoints;
+mod endpoints_v1;
 mod structs;
 mod all_info;
