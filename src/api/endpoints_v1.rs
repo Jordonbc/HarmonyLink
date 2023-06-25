@@ -5,7 +5,7 @@ use crate::v1::{docking, os, all_info, battery};
 use crate::version;
 
 #[get("/are_you_there")]
-pub async fn index() -> HttpResponse {
+pub async fn heartbeat() -> HttpResponse {
     HttpResponse::Ok().body("yes")
 }
 
@@ -89,6 +89,7 @@ pub async fn get_version_info() -> HttpResponse {
 }
 
 pub fn configure(cfg: &mut web::ServiceConfig) {
+    cfg.service(heartbeat);
     cfg.service(get_all_info);
     cfg.service(get_dock_info);
     cfg.service(get_os_info);
