@@ -11,7 +11,8 @@ pub struct Version {
     pub version_major: i32,
     pub version_minor: i32,
     pub version_patch: i32,
-    pub version_pre: String
+    pub version_pre: String,
+    pub supported_api_versions: Vec<String>
 }
 
 impl Version {
@@ -26,10 +27,15 @@ impl Version {
         version_major: env!("CARGO_PKG_VERSION_MAJOR").parse().unwrap(),
         version_minor: env!("CARGO_PKG_VERSION_MINOR").parse().unwrap(),
         version_patch: env!("CARGO_PKG_VERSION_PATCH").parse().unwrap(),
-        version_pre: env!("CARGO_PKG_VERSION_PRE").parse().unwrap()
+        version_pre: env!("CARGO_PKG_VERSION_PRE").parse().unwrap(),
+        supported_api_versions: vec!["v1".to_string()]
         }
     }
     pub fn to_string(self) -> String {
         serde_json::to_string(&self).expect("Failed to parse into string")
     }
+    pub fn supported_api_versions_to_string(self) -> String {
+        self.supported_api_versions.join(", ")
+    }
+    
 }
