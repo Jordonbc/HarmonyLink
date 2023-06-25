@@ -1,9 +1,8 @@
 use actix_web::web;
 use actix_web::{HttpResponse, get};
 
-use crate::docking;
+use crate::v1::{docking, os, all_info, battery};
 use crate::version;
-use crate::battery;
 
 #[get("/are_you_there")]
 pub async fn index() -> HttpResponse {
@@ -12,7 +11,7 @@ pub async fn index() -> HttpResponse {
 
 #[get("/all_info")]
 pub async fn get_all_info() -> HttpResponse {
-    match crate::api::all_info::get_all_info() {
+    match all_info::stats::get_all_info() {
         Ok(info) => {
 
             #[cfg(debug_assertions)]
@@ -48,7 +47,7 @@ pub async fn get_dock_info() -> HttpResponse {
 
 #[get("/os_info")]
 pub async fn get_os_info() -> HttpResponse {
-    match crate::os::stats::get_os() {
+    match os::stats::get_os() {
         Ok(info) => {
             #[cfg(debug_assertions)]
             {

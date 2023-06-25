@@ -1,4 +1,4 @@
-use crate::battery::structs::ChargingStatus;
+use crate::v1::battery::structs::ChargingStatus;
 
 use super::structs::BatteryInfo;
 

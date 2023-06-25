@@ -1,5 +1,6 @@
 use serde::{Deserialize, Serialize};
-use crate::{os, battery, docking::{self, structs::DockInfo}, version};
+use crate::{v1::{os, battery, docking::{self, structs::DockInfo}}, version};
+
 
 #[derive(Deserialize, Serialize, Clone)]
 pub struct Allinfo {

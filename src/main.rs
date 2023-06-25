@@ -1,6 +1,4 @@
-mod battery;
-mod docking;
-mod os;
+mod v1;
 
 mod version;
 use version::info::Version;
