@@ -36,7 +36,7 @@ Before getting started, make sure you have:
 
 ## HarmonyLink: View
 
-To view the API in action, check out [HarmonyLink: View](https://github.com/Jordonbc/HarmonyLinkView). This sister project provides a comprehensive interface to see what the API is doing in real-time.
+To view the API in action, check out [HarmonyLink: View](https://github.com/Jordonbc/HarmonyLinkView). This sister project provides a comprehensive interface to see what data the API is providing.
 
 ## Showcasing HarmonyLink
 
