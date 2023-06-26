@@ -1,6 +1,6 @@
 use serde::{Deserialize, Serialize};
 
-#[derive(Deserialize, Serialize, Debug, PartialEq)]
+#[derive(Deserialize, Serialize, PartialEq, Clone)]
 pub enum Platform {
     WINDOWS = 0,
     LINUX = 1,
@@ -8,14 +8,14 @@ pub enum Platform {
     UNKNOWN = 255
 }
 
-#[derive(Deserialize, Serialize)]
+#[derive(Deserialize, Serialize, Clone)]
 pub enum Architecture {
     X86 = 0,
     X86_64 = 1,
     UNKNOWN = 255,
 }
 
-#[derive(Deserialize, Serialize)]
+#[derive(Deserialize, Serialize, Clone)]
 pub struct OSInfo {
     pub platform: Platform, // Windows, Mac, Linux
     pub name: String, // "Windows 11 2306", "Ubuntu 22.04 LTS"
@@ -31,5 +31,8 @@ impl OSInfo {
             version: String::new(),
             bits: Architecture::UNKNOWN
         }
+    }
+    pub fn to_string(self) -> String {
+        serde_json::to_string(&self).expect("Failed to parse into string")
     }
 }

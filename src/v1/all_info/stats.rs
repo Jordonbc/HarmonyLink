@@ -1,6 +1,6 @@
-use crate::docking;
-use crate::battery;
-use crate::os;
+use crate::v1::docking;
+use crate::v1::battery;
+use crate::v1::os;
 use crate::version;
 
 use super::structs::Allinfo;

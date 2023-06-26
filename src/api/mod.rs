@@ -1,4 +1,3 @@
 pub mod server;
-mod endpoints;
-mod structs;
-mod all_info;
+mod endpoints_v1;
+mod api;

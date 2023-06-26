@@ -1,9 +1,9 @@
 use std::{io::BufReader, fs::File};
 
 #[allow(unused_imports)]
-use std::collections::hash_set;
+use std::collections::HashSet;
 
-use crate::{battery::{stats::get_battery_info, structs::ChargingStatus}, USE_FALLBACK_DOCK_DETECTION};
+use crate::{v1::{battery::{stats::get_battery_info, structs::ChargingStatus}}, USE_FALLBACK_DOCK_DETECTION};
 
 use super::structs::{Dock, DockInfo};
 

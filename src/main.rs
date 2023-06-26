@@ -1,6 +1,4 @@
-mod battery;
-mod docking;
-mod os;
+mod v1;
 
 mod version;
 use version::info::Version;
@@ -22,6 +20,8 @@ fn main() {
         println!("Git Describe: {}", version_info.git_describe);
         println!("Git Commit Timestamp: {}", version_info.git_commit_timestamp);
         println!("Debug Build: {}", version_info.debug);
+        println!("API versions: {}", version_info.supported_api_versions_to_string());
+
         println!("\n\n");
     }
 
