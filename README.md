@@ -53,9 +53,6 @@ HarmonyLink operates using a client-server structure. This server-side applicati
 
 Developers and modders can easily implement GET and POST requests from the API, integrating system metrics into games. These metrics can be used to adapt the game's quality settings, providing a more customized gaming experience.
 
-## Getting Started
-For details on getting started please go to [Getting Started](https://github.com/Jordonbc/HarmonyLinkServer/wiki/Getting-Started)
-
 ## HarmonyLink: View
 
 To view the API in action, check out [HarmonyLink: View](https://github.com/Jordonbc/HarmonyLinkView). This sister project provides a comprehensive interface to see what data the API is providing.
@@ -78,7 +75,7 @@ A: HarmonyLink supports both native Linux and Windows platforms, and extends its
 
 ### Q2: How can I get started with HarmonyLink?
 
-A: You can start by cloning the HarmonyLinkServer repository. Detailed instructions are provided in the [Getting Started](https://github.com/Jordonbc/HarmonyLinkServer#getting-started) section.
+A: You can start by cloning the HarmonyLinkServer repository. Detailed instructions are provided on the [Getting Started](https://github.com/Jordonbc/HarmonyLinkServer/wiki/Getting-Started) wiki page.
 
 ### Q3: Can HarmonyLink be used with games developed in different game engines?
 
