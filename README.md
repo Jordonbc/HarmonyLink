@@ -72,4 +72,4 @@ A: HarmonyLink is designed to be lightweight and efficient, with minimal impact 
 
 ## License
 
-This project is licensed under the GNU General Public License v3.0 or later.
+This project is licensed under the GNU General Public License v3.0 or later. Please do not redistribute HarmonyLinkServer. e.g.: Proving an alternative download link or distributing with a game.
