@@ -4,9 +4,23 @@
 
 Welcome to the server-side application for the HarmonyLink project. This innovative software is developed with the Rust programming language and is aimed at enhancing the handheld gaming experience.
 
-## The Vision and The Reality
+## Table of Contents
 
-The central goal with HarmonyLink is to provide a comprehensive and interactive gaming experience on handheld devices. This client-side application is a crucial part of this vision.
+- [Shaping the Vision, Living the Reality](#shaping-the-vision,-living-the-reality)
+- [Key Features](#key-features)
+- [Using the Program](#using-the-program)
+  - [Windows Users](#windows-users)
+  - [Steam Deck (Linux) Users](#steam-deck-linux-users)
+- [How It Works](#how-it-works)
+- [Getting Started](https://github.com/Jordonbc/HarmonyLinkServer/wiki/Getting-Started)
+- [HarmonyLink: View](#harmonylink-view)
+- [Showcasing HarmonyLink](#showcasing-harmonylink)
+- [Frequently Asked Questions (FAQ)](#frequently-asked-questions-faq)
+- [License](#license)
+
+## Shaping the Vision, Living the Reality
+
+HarmonyLink is on a mission to transform handheld gaming by providing an interactive experience. This server-side application is at the heart of making this vision a reality.
 
 ## Key Features
 
