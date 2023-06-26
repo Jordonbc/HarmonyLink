@@ -75,12 +75,6 @@ To view the API in action, check out [HarmonyLink: View](https://github.com/Jord
 
 👇 To help visualize its functionality, we've included a demonstration video that showcases HarmonyLink in action on a Steam Deck in gamemode. [![HarmonyLink in action](https://img.youtube.com/vi/qU3w_fo4nY4/0.jpg)](https://www.youtube.com/watch?v=qU3w_fo4nY4)
 
-## Conclusion
-
-HarmonyLink is a significant step towards revolutionizing the handheld gaming experience. Whether you're a game developer aiming to optimize your games for handheld devices or a gamer seeking a more personalized handheld gaming experience, HarmonyLink might just be what you've been waiting for.
-
-We welcome your feedback, questions, and suggestions. Feel free to raise an issue or submit a pull request. Happy coding and game on!
-
 ## Frequently Asked Questions (FAQ)
 
 ### Q1: What platforms are supported by HarmonyLink?
