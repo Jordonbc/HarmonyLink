@@ -75,6 +75,12 @@ To view the API in action, check out [HarmonyLink: View](https://github.com/Jord
 
 👇 To help visualize its functionality, we've included a demonstration video that showcases HarmonyLink in action on a Steam Deck in gamemode. [![HarmonyLink in action](https://img.youtube.com/vi/qU3w_fo4nY4/0.jpg)](https://www.youtube.com/watch?v=qU3w_fo4nY4)
 
+## Contributing Guidelines
+
+Please refer to our [Contributing Guidelines](CONTRIBUTING.md) for detailed information on how to contribute to HarmonyLinkServer. It includes instructions for bug reports, feature requests, and pull requests.
+
+We appreciate your interest in improving HarmonyLinkServer and look forward to your contributions!
+
 ## Frequently Asked Questions (FAQ)
 
 ### Q1: What platforms are supported by HarmonyLink?
