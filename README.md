@@ -21,9 +21,14 @@ HarmonyLink operates using a client-server structure. This server-side applicati
 Developers and modders can easily implement GET and POST requests from the API, integrating system metrics into games. These metrics can be used to adapt the game's quality settings, providing a more customized gaming experience.
 
 ## Getting Started
+### Prerequisites
+Before getting started, make sure you have:
 
-This project assumes that you already know how to compile and run Rust applications.
+- A working installation of [Rust](https://www.rust-lang.org).
+- Familiarity with Rust syntax and concepts.
+- [Git](https://git-scm.com/downloads) installed on your system.
 
+### Compiling
 1. Clone the repository: `git clone https://github.com/Jordonbc/HarmonyLinkServer.git`
 2. Navigate into the directory: `cd HarmonyLinkServer`
 3. Build the project: `cargo build`
