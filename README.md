@@ -14,6 +14,39 @@ The central goal with HarmonyLink is to provide a comprehensive and interactive 
 2. **Real-Time Metrics**: Games can access real-time data about the handheld device's power usage and docking status through HarmonyLink.
 3. **Cross-Platform Compatibility**: HarmonyLink extends its functionality to Windows games running on Proton/Wine.
 
+## Using HarmonyLinkServer
+
+For users who wish to run the precompiled release version of HarmonyLinkServer, please follow the instructions specific to your platform below.
+
+### Windows Users
+
+1. Navigate to the [latest release](https://github.com/Jordonbc/HarmonyLinkServer/releases/latest) on the project's GitHub page.
+2. Download the `.zip` archive for Windows.
+3. Extract the contents of the `.zip` archive to a directory of your choice.
+4. Open a command prompt in the directory where you extracted the files.
+5. Run the HarmonyLinkServer executable by typing `./harmony_link_server.exe`.
+
+Please note that you'll need to manually start the program each time you want to use it.
+
+### Steam Deck (Linux) Users
+
+1. Navigate to the [latest release](https://github.com/Jordonbc/HarmonyLinkServer/releases/latest) on the project's GitHub page.
+2. Download the `.zip` archive for Linux.
+3. Extract the contents of the `.zip` archive to a directory of your choice.
+
+#### Running in Desktop Mode
+
+To use HarmonyLinkServer in Desktop Mode, follow these steps:
+
+1. Open a terminal in the directory where you extracted the files.
+2. Run the HarmonyLinkServer executable by typing `./harmony_link_server`.
+
+Please note that you'll need to keep the terminal window open while using HarmonyLinkServer in desktop mode.
+
+#### Optional: Setting Up as a Service for Gamemode
+
+For a seamless experience in gamemode, you have the option to set up HarmonyLinkServer as a service on your Steam Deck. Please be aware that this setup process will require a moderate level of technical knowledge.
+
 ## How It Works
 
 HarmonyLink operates using a client-server structure. This server-side application runs on the host side (native Linux or Windows), and games access the metrics via an API.
