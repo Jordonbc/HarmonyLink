@@ -27,7 +27,7 @@ impl Version {
         version_major: env!("CARGO_PKG_VERSION_MAJOR").parse().unwrap(),
         version_minor: env!("CARGO_PKG_VERSION_MINOR").parse().unwrap(),
         version_patch: env!("CARGO_PKG_VERSION_PATCH").parse().unwrap(),
-        version_pre: env!("CARGO_PKG_VERSION_PRE").parse().unwrap(),
+        version_pre: "".to_string(),
         supported_api_versions: vec!["v1".to_string()]
         }
     }
