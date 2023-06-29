@@ -2,6 +2,12 @@
   <img src="Images/HarmonyLinkLogo.png" alt="HarmonyLinkLogo"/>
 </p>
 
+<p align="center">
+  <a href="https://github.com/Jordonbc/HarmonyLinkServer/releases/latest/download/harmonylink_installer.desktop">
+    <img src="Images/Download Button.png" alt="Download HarmonyLink" width=450 style="padding-top: 15px;"/>
+  </a>
+</p>
+
 Welcome to the server-side application for the HarmonyLink project. This innovative software is developed with the Rust programming language and is aimed at enhancing the handheld gaming experience.
 
 ## Table of Contents
