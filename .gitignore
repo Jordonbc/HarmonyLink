@@ -13,5 +13,6 @@ build/**
 !/license
 !readme.md
 
+!.github/**
 !HarmonyLinkLib/**
 !HarmonyLinkTest/**
