@@ -2,119 +2,108 @@
   <img src="Images/HarmonyLinkLogo.png" alt="HarmonyLinkLogo"/>
 </p>
 
-<p align="center">
-  <a href="https://github.com/Jordonbc/HarmonyLinkServer/releases/latest/download/harmonylink_installer.desktop">
-    <img src="Images/Download Button.png" alt="Download HarmonyLink" width=450 style="padding-top: 15px;"/>
-  </a>
-</p>
-
-Welcome to the server-side application for the HarmonyLink project. This innovative software is developed with the Rust programming language and is aimed at enhancing the handheld gaming experience.
+Welcome to HarmonyLink 2.0. This iteration represents a leap forward in enhancing the handheld gaming experience, now re-engineered as a C++ dynamic link library (DLL) for seamless integration directly into games.
 
 ## Table of Contents
 
-- [Shaping the Vision, Living the Reality](#shaping-the-vision,-living-the-reality)
 - [Key Features](#key-features)
-- [Using the Program](#using-the-program)
-  - [Windows Users](#windows-users)
-  - [Steam Deck (Linux) Users](#steam-deck-linux-users)
+- [HarmonyLink in Action](#harmonylink-in-action)
+- [Integration Guide](#integration-guide)
+  - [For Game Developers](#for-game-developers)
+  - [Unreal Engine 5 Plugin](#unreal-engine-5-plugin)
+- [Building From Source](#building-from-source)
 - [How It Works](#how-it-works)
-- [Getting Started](https://github.com/Jordonbc/HarmonyLinkServer/wiki/Getting-Started)
-- [HarmonyLink: View](#harmonylink-view)
-- [Showcasing HarmonyLink](#showcasing-harmonylink)
+- [Getting Started](https://github.com/Jordonbc/HarmonyLink/wiki/Getting-Started)
 - [Frequently Asked Questions (FAQ)](#frequently-asked-questions-faq)
+- [Contributing](#contributing)
 - [License](#license)
-
-## Shaping the Vision, Living the Reality
-
-HarmonyLink is on a mission to transform handheld gaming by providing an interactive experience. This server-side application is at the heart of making this vision a reality.
 
 ## Key Features
 
-1. **Device Identification**: HarmonyLink equips games with the ability to identify the specific handheld device they are operating on.
-2. **Real-Time Metrics**: Games can access real-time data about the handheld device's power usage and docking status through HarmonyLink.
-3. **Cross-Platform Compatibility**: HarmonyLink extends its functionality to Windows games running on Proton/Wine.
+- **Intelligent Hardware Recognition**: HarmonyLink 2.0 can accurately identify specific devices like the Steam Deck without relying on manual environment variables or command line arguments.
+  
+- **Robust API**: The API provided by HarmonyLink 2.0 offers developers straightforward and effortless access to detailed system information. Designed with intuitiveness in mind, it allows for rapid integration into projects, minimizing development overhead.
 
-## Using HarmonyLinkServer
+- **Enhanced Adaptability**: With the ability to dynamically adjust game settings and performance based on detected hardware capabilities and current operating conditions, HarmonyLink 2.0 ensures games are optimized for each specific device.
 
-For users who wish to run the precompiled release version of HarmonyLinkServer, please follow the instructions specific to your platform below.
+- **Wine Environment Detection**: HarmonyLink 2.0 includes mechanisms to detect when it is running within a Wine environment, enabling it to deliver system information about the underlying Linux system while operating through Wine.
 
-### Windows Users
+- **Precise Steam Deck Hardware Detection**: Unlike conventional methods that may rely on environment variables, HarmonyLink 2.0 detects the presence of Steam Deck hardware directly, ensuring reliable identification and optimization for this specific device.
 
-1. Navigate to the [latest release](https://github.com/Jordonbc/HarmonyLinkServer/releases/latest) on the project's GitHub page.
-2. Download the `.zip` archive for Windows.
-3. Extract the contents of the `.zip` archive to a directory of your choice.
-4. Open a command prompt in the directory where you extracted the files.
-5. Run the HarmonyLinkServer executable by typing `./harmony_link_server.exe`.
+- **Battery and Charging Status Awareness**: The software provides real-time data on battery levels and charging status, allowing games to adapt their behavior based on power availability and to manage resource usage effectively.
 
-Please note that you'll need to manually start the program each time you want to use it.
+- **Cross-Platform Functionality**: HarmonyLink 2.0 is designed to work on Windows (including Wine environments) as well as natively on Linux, offering broad support for a variety of gaming setups.
 
-### Steam Deck (Linux) Users
+- **Unreal Engine 5 Compatibility**: HarmonyLink 2.0 comes with full support for Unreal Engine 5, making it a versatile tool for developers working with one of the most advanced game engines in the industry.
 
-1. Navigate to the [latest release](https://github.com/Jordonbc/HarmonyLinkServer/releases/latest) on the project's GitHub page.
-2. Download the `.zip` archive for Linux.
-3. Extract the contents of the `.zip` archive to a directory of your choice.
+## HarmonyLink in Action
 
-#### Running in Desktop Mode
-
-To use HarmonyLinkServer in Desktop Mode, follow these steps:
-
-1. Open a terminal in the directory where you extracted the files.
-2. Run the HarmonyLinkServer executable by typing `./harmony_link_server`.
-
-Please note that you'll need to keep the terminal window open while using HarmonyLinkServer in desktop mode.
-
-#### Optional: Setting Up as a Service for Gamemode
-
-For a seamless experience in gamemode, you have the option to set up HarmonyLinkServer as a service on your Steam Deck. Please be aware that this setup process will require a moderate level of technical knowledge.
-
-## How It Works
-
-HarmonyLink operates using a client-server structure. This server-side application runs on the host side (native Linux or Windows), and games access the metrics via an API.
-
-Developers and modders can easily implement GET and POST requests from the API, integrating system metrics into games. These metrics can be used to adapt the game's quality settings, providing a more customized gaming experience.
-
-## HarmonyLink: View
-
-To view the API in action, check out [HarmonyLink: View](https://github.com/Jordonbc/HarmonyLinkView). This sister project provides a comprehensive interface to see what data the API is providing.
-
-## Showcasing HarmonyLink
-
-👇 To help visualize its functionality, we've included a demonstration video that showcases HarmonyLink in action on a Steam Deck in gamemode.
+Experience the capabilities of HarmonyLink: Legacy (June 2023 version) with our demonstration:
 
 [![HarmonyLink in action](https://img.youtube.com/vi/qU3w_fo4nY4/0.jpg)](https://www.youtube.com/watch?v=qU3w_fo4nY4)
 
-## Contributing Guidelines
+## Integration Guide
 
-Please refer to our [Contributing Guidelines](CONTRIBUTING.md) for detailed information on how to contribute to HarmonyLinkServer. It includes instructions for bug reports, feature requests, and pull requests.
+### For Game Developers
 
-We appreciate your interest in improving HarmonyLinkServer and look forward to your contributions!
+Integrate HarmonyLink 2.0 into your game project with ease:
+
+1. Download the latest version of HarmonyLink 2.0 from the [releases page](https://github.com/Jordonbc/HarmonyLink/releases/latest).
+2. Add the HarmonyLink DLL to your project according to your development environment's specifications.
+3. Utilize the provided API to access device-specific metrics and enhance your game's performance on handheld devices.
+
+Refer to the [integration documentation](https://github.com/Jordonbc/HarmonyLink/wiki/Integration-Guide) for detailed instructions.
+
+### Unreal Engine 5 Plugin
+
+For developers leveraging Unreal Engine 5.3 or newer*, HarmonyLink 2.0 is readily accessible as a plugin:
+
+1. Clone or download the HarmonyLink UE5 Plugin from the [Unreal Engine Plugin repository](https://github.com/Jordonbc/HarmonyLinkUE5Plugin).
+2. Place the HarmonyLink plugin folder into the `Plugins` directory of your Unreal Engine 5 project.
+3. Enable the HarmonyLink plugin from the Edit > Plugins menu within Unreal Engine 5.
+4. Access HarmonyLink functionalities via Blueprints or C++ within your project.
+
+For a step-by-step guide, visit the [Unreal Engine 5 Plugin instructions](https://github.com/Jordonbc/HarmonyLinkUE5Plugin/wiki/Integration-Guide) on our wiki.
+
+*With potential backward compatibility, not verified.
+
+## Building From Source
+
+If you prefer to build HarmonyLink 2.0 from the source code, follow these steps:
+
+1. Clone the repository using `git clone https://github.com/Jordonbc/HarmonyLink.git`.
+2. Navigate into the cloned directory with `cd HarmonyLink`.
+3. Ensure CMake is installed and up-to-date on your system.
+4. Generate the build configuration with `cmake -S . -B build`.
+5. Compile the code by running `cmake --build build --config Release`.
+6. The built DLL will be located in the `build/bin/HarmonyLinkLib` directory.
+
+For additional building options and troubleshooting, refer to the [building from source documentation](https://github.com/Jordonbc/HarmonyLink/wiki/Building-From-Source).
+
+
+## How It Works
+
+HarmonyLink 2.0 functions without the need for a separate server application. The DLL is integrated directly into the game, providing a conduit between the game and the device hardware for real-time metrics and enhanced performance adaptability.
 
 ## Frequently Asked Questions (FAQ)
 
-### What platforms are supported by HarmonyLink?
+- **What new capabilities does HarmonyLink 2.0 bring?**
+  HarmonyLink 2.0 offers a streamlined, more efficient way for games to interact with handheld hardware, now as a C++ DLL for easy integration without the need for server-side components.
 
-A: HarmonyLink supports both native Linux and Windows platforms, and extends its functionality to Windows games running on Proton/Wine.
+- **How can developers integrate HarmonyLink 2.0 into their games?**
+  Developers can include HarmonyLink 2.0 in their projects by adding the DLL and making API calls as needed. Detailed instructions are available on our wiki.
 
-### Why does HarmonyLink require an external program in addition to a game engine plugin?
+- **Does HarmonyLink 2.0 support Proton/Wine?**
+  Yes, it includes workarounds and functionalities tailored for games running in Proton/Wine environments.
 
-A: HarmonyLink utilizes an external program alongside the game engine plugin to ensure accurate data is passed to the game and to probe low-level hardware for more precise dock information. By having a separate server-side application, HarmonyLink can establish a standardized API that allows games to access real-time metrics and adapt their settings accordingly. Additionally, the use of an external program helps address potential compatibility issues with Proton/Wine layers and ensures seamless integration with different game engines.
+- **Does HarmonyLink 2.0 rely `STEAM_DECK=1`?**
 
-### How can I get started with HarmonyLink?
+No, HarmonyLink 2.0 does not rely on the `STEAM_DECK=1` environment variable. Instead, it employs advanced hardware detection techniques to accurately identify the presence of specific devices, such as the Steam Deck. This direct detection method ensures reliable performance optimization tailored to the actual hardware, independent of any user-modified environment settings.
 
-A: You can start by cloning the HarmonyLinkServer repository. Detailed instructions are provided on the [Getting Started](https://github.com/Jordonbc/HarmonyLinkServer/wiki/Getting-Started) wiki page.
+## Contributing
 
-### Can HarmonyLink be used with games developed in different game engines?
-
-A: Yes, HarmonyLink is designed to be engine-agnostic and can be used with games developed in different engines. For Unreal Engine, there is a specific [Unreal Engine Plugin](https://github.com/Jordonbc/HarmonyLinkUE) available.
-
-### Is HarmonyLink only for game developers, or can players also use it?
-
-A: While game developers will find HarmonyLink particularly useful for optimizing their games for handheld devices, players can also benefit from the enhanced gaming experience that HarmonyLink provides.
-
-### Does HarmonyLink have any impact on the performance of the games?
-
-A: HarmonyLink is designed to be lightweight and efficient, with minimal impact on game performance. The primary purpose of HarmonyLink is to enhance game performance by allowing games to adapt their settings based on real-time device metrics.
+Your contributions make HarmonyLink better. Please review our [Contributing Guidelines](CONTRIBUTING.md) for information on submitting pull requests and helping with development.
 
 ## License
 
-This project is licensed under the GNU General Public License v3.0 or later. Please do not redistribute HarmonyLinkServer. e.g.: Proving an alternative download link or distributing with a game.
+HarmonyLink 2.0 is released under the GNU General Public License v3.0 or later. See the [LICENSE](LICENSE) file for details.
