@@ -10,9 +10,8 @@ build/**
 !.gitmodules
 
 !CMakeLists.txt
-!license
+!/license
 !readme.md
 
 !HarmonyLinkLib/**
 !HarmonyLinkTest/**
-!tests/**
