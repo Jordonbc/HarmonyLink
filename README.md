@@ -58,12 +58,12 @@ Refer to the [integration documentation](https://github.com/Jordonbc/HarmonyLink
 
 For developers leveraging Unreal Engine 5.3 or newer*, HarmonyLink 2.0 is readily accessible as a plugin:
 
-1. Clone or download the HarmonyLink UE5 Plugin from the [Unreal Engine Plugin repository](https://github.com/Jordonbc/HarmonyLinkUE5Plugin).
+1. Clone or download the HarmonyLink UE5 Plugin from the [Unreal Engine Plugin repository](https://github.com/Jordonbc/HarmonyLinkUE).
 2. Place the HarmonyLink plugin folder into the `Plugins` directory of your Unreal Engine 5 project.
 3. Enable the HarmonyLink plugin from the Edit > Plugins menu within Unreal Engine 5.
 4. Access HarmonyLink functionalities via Blueprints or C++ within your project.
 
-For a step-by-step guide, visit the [Unreal Engine 5 Plugin instructions](https://github.com/Jordonbc/HarmonyLinkUE5Plugin/wiki/Integration-Guide) on our wiki.
+For a step-by-step guide, visit the [Unreal Engine 5 Plugin instructions](https://github.com/Jordonbc/HarmonyLinkUE/wiki/Integration-Guide) on our wiki.
 
 *With potential backward compatibility, not verified.
 
