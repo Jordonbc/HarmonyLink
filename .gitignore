@@ -1,14 +1,18 @@
+# Setup .gitignore as a whitelist
 *
 !*/
 
+build/**
+
+# track this file
 !.gitignore
-!src/**
-!res/HarmonyLinkLogo.ico
-!Resources/**
-!Images/**
-!.github/**
-!Build.rs
-!Cargo.toml
-!Cargo.lock
-!LICENSE
-!README.md
+!.gitattributes
+!.gitmodules
+
+!CMakeLists.txt
+!license
+!readme.md
+
+!HarmonyLinkLib/**
+!HarmonyLinkTest/**
+!tests/**
