@@ -2,6 +2,12 @@
   <img src="Images/HarmonyLinkLogo.png" alt="HarmonyLinkLogo"/>
 </p>
 
+<p align="center">
+  <a href="https://github.com/Jordonbc/HarmonyLinkServer/releases/latest/download/harmonylink_installer.desktop">
+    <img src="Images/Download Button.png" alt="Download HarmonyLink" width=450 style="padding-top: 15px;"/>
+  </a>
+</p>
+
 Welcome to the server-side application for the HarmonyLink project. This innovative software is developed with the Rust programming language and is aimed at enhancing the handheld gaming experience.
 
 ## Table of Contents
@@ -85,23 +91,27 @@ We appreciate your interest in improving HarmonyLinkServer and look forward to y
 
 ## Frequently Asked Questions (FAQ)
 
-### Q1: What platforms are supported by HarmonyLink?
+### What platforms are supported by HarmonyLink?
 
 A: HarmonyLink supports both native Linux and Windows platforms, and extends its functionality to Windows games running on Proton/Wine.
 
-### Q2: How can I get started with HarmonyLink?
+### Why does HarmonyLink require an external program in addition to a game engine plugin?
+
+A: HarmonyLink utilizes an external program alongside the game engine plugin to ensure accurate data is passed to the game and to probe low-level hardware for more precise dock information. By having a separate server-side application, HarmonyLink can establish a standardized API that allows games to access real-time metrics and adapt their settings accordingly. Additionally, the use of an external program helps address potential compatibility issues with Proton/Wine layers and ensures seamless integration with different game engines.
+
+### How can I get started with HarmonyLink?
 
 A: You can start by cloning the HarmonyLinkServer repository. Detailed instructions are provided on the [Getting Started](https://github.com/Jordonbc/HarmonyLinkServer/wiki/Getting-Started) wiki page.
 
-### Q3: Can HarmonyLink be used with games developed in different game engines?
+### Can HarmonyLink be used with games developed in different game engines?
 
 A: Yes, HarmonyLink is designed to be engine-agnostic and can be used with games developed in different engines. For Unreal Engine, there is a specific [Unreal Engine Plugin](https://github.com/Jordonbc/HarmonyLinkUE) available.
 
-### Q4: Is HarmonyLink only for game developers, or can players also use it?
+### Is HarmonyLink only for game developers, or can players also use it?
 
 A: While game developers will find HarmonyLink particularly useful for optimizing their games for handheld devices, players can also benefit from the enhanced gaming experience that HarmonyLink provides.
 
-### Q5: Does HarmonyLink have any impact on the performance of the games?
+### Does HarmonyLink have any impact on the performance of the games?
 
 A: HarmonyLink is designed to be lightweight and efficient, with minimal impact on game performance. The primary purpose of HarmonyLink is to enhance game performance by allowing games to adapt their settings based on real-time device metrics.
 

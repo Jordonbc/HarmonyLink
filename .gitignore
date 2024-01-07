@@ -5,6 +5,7 @@
 !src/**
 !res/HarmonyLinkLogo.ico
 !Resources/**
+!Images/**
 !.github/**
 !Build.rs
 !Cargo.toml
