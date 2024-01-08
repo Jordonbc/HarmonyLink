@@ -40,7 +40,16 @@ Welcome to HarmonyLink 2.0. This iteration represents a leap forward in enhancin
 
 Experience the capabilities of HarmonyLink: Legacy (June 2023 version) with our demonstration:
 
-[![HarmonyLink in action](https://img.youtube.com/vi/qU3w_fo4nY4/0.jpg)](https://www.youtube.com/watch?v=qU3w_fo4nY4)
+<h3 align="center" style="font-size: 16pt;"> Video below ⬇️</h3>
+
+<p align="center">
+  <a href="https://www.youtube.com/watch?v=qU3w_fo4nY4"><img src="https://img.youtube.com/vi/qU3w_fo4nY4/0.jpg" alt="HarmonyLinkExample" height="480"/></a>
+</p>
+
+<p align="center">
+  <br><br><br>
+  <img src="Images/SteamDeckExample.jpg" alt="HarmonyLinkExample" height="480"/>
+</p>
 
 ## Integration Guide
 
