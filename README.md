@@ -51,7 +51,9 @@ Experience the capabilities of HarmonyLink: Legacy (June 2023 version) with our 
   <img src="Images/SteamDeckExample.jpg" alt="HarmonyLinkExample" height="480"/>
 </p>
 
-The picture above shows a packaged Shipping build of a UE5 project with the HarmonyLink plugin enabled. Widgets we're added to the viewport to display these values. The values are updated on tick, with no noticable performance loss.
+The picture above shows a packaged Win64 (exe) Shipping build of a UE5 project with the HarmonyLink plugin enabled running via Proton. Widgets were added to the viewport to display these values. The values are updated on tick, with no noticable performance loss.
+
+As you can see, Even though it's running on Proton, we can still detect the underlying system specifications.
 
 ## Integration Guide
 
