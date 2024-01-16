@@ -48,6 +48,8 @@ namespace HarmonyLinkLib
 
     extern "C" HARMONYLINKLIB_API bool get_is_linux();
 
+    extern "C" HARMONYLINKLIB_API bool get_is_docked();
+
     extern "C" HARMONYLINKLIB_API FCPUInfo* get_cpu_info();
 
     extern "C" HARMONYLINKLIB_API FDevice* get_device_info();

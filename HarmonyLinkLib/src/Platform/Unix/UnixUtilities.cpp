@@ -18,21 +18,43 @@ namespace HarmonyLinkLib
 {
     bool UnixUtilities::is_running_under_wine()
     {
-    return false;
+        std::wcout << "This feature is not supported on unix systems yet.\n";
+        return false;
     }
 
     std::shared_ptr<FCPUInfo> UnixUtilities::get_cpu_info()
     {
+        std::wcout << "This feature is not supported on unix systems yet.\n";
         return nullptr;
     }
 
     std::shared_ptr<FBattery> UnixUtilities::get_battery_status()
     {
+        std::wcout << "This feature is not supported on unix systems yet.\n";
         return nullptr;
     }
 
     std::shared_ptr<FOSVerInfo> UnixUtilities::get_os_version()
     {
+        std::wcout << "This feature is not supported on unix systems yet.\n";
         return nullptr;
+    }
+
+    bool UnixUtilities::get_is_external_monitor_connected()
+    {
+        std::wcout << "This feature is not supported on unix-based systems yet.\n";
+        return false;
+    }
+
+    bool UnixUtilities::get_mouse_keyboard_detected()
+    {
+        std::wcout << "This feature is not supported on unix-based systems yet.\n";
+        return false;
+    }
+
+    bool UnixUtilities::get_external_controller_detected()
+    {
+        std::wcout << "This feature is not supported on unix-based systems yet.\n";
+        return false;
     }
 }
