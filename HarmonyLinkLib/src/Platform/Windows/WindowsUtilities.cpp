@@ -21,6 +21,7 @@
 #pragma comment(lib, "XInput.lib")
 
 #include "Platform/WineUtilities.h"
+#include <algorithm>
 
 namespace HarmonyLinkLib
 {
@@ -105,35 +106,40 @@ namespace HarmonyLinkLib
         return monitorCount > 1;
     }
 
-    bool WindowsUtilities::get_mouse_keyboard_detected()
+    bool WindowsUtilities::get_keyboard_detected()
     {
         UINT n_devices;
-        GetRawInputDeviceList(nullptr, &n_devices, sizeof(RAWINPUTDEVICELIST));
+        std::vector<RAWINPUTDEVICELIST> devices;
+        
+        GetRawInputDeviceList(devices.data(), &n_devices, sizeof(RAWINPUTDEVICELIST));
 
-        if (n_devices > 0) {
-            bool mouse_detected = false;
-            bool keyboard_detected = false;
-            
-            std::vector<RAWINPUTDEVICELIST> devices(n_devices);
-            GetRawInputDeviceList(devices.data(), &n_devices, sizeof(RAWINPUTDEVICELIST));
-
-            for (const auto& device : devices) {
-                switch (device.dwType)
-                {
-                case RIM_TYPEMOUSE:
-                    mouse_detected = true;
-                    break;
-                case RIM_TYPEKEYBOARD:
-                    keyboard_detected = true;
-                    break;
-                    
-                default:
-                    break;
-                }
-            }
-            return mouse_detected && keyboard_detected;
+        if (n_devices == 0)
+        {
+            return false;
         }
-        return false;
+
+        return std::any_of(devices.begin(), devices.end(), [](const RAWINPUTDEVICELIST& device)
+        {
+            return device.dwType == RIM_TYPEKEYBOARD;
+        });
+    }
+
+    bool WindowsUtilities::get_mouse_detected()
+    {
+        UINT n_devices;
+        std::vector<RAWINPUTDEVICELIST> devices;
+        
+        GetRawInputDeviceList(devices.data(), &n_devices, sizeof(RAWINPUTDEVICELIST));
+
+        if (n_devices == 0)
+        {
+            return false;
+        }
+
+        return std::any_of(devices.begin(), devices.end(), [](const RAWINPUTDEVICELIST& device)
+        {
+            return device.dwType == RIM_TYPEMOUSE;
+        });
     }
 
     bool WindowsUtilities::get_external_controller_detected()
@@ -152,5 +158,20 @@ namespace HarmonyLinkLib
         }
 
         return connectedGamepads > 1;
+    }
+
+    bool WindowsUtilities::get_is_steam_deck_native_resolution()
+    {
+        DEVMODE devMode;
+        devMode.dmSize = sizeof(DEVMODE);
+
+        // Get the current display settings for the primary monitor
+        if (EnumDisplaySettings(NULL, ENUM_CURRENT_SETTINGS, &devMode)) {
+            // Check if the resolution is higher than 800p (1280x800)
+            if (devMode.dmPelsWidth > 1280 || devMode.dmPelsHeight > 800) {
+                return true;
+            }
+        }
+        return false;
     }
 }

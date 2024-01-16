@@ -43,8 +43,10 @@ namespace HarmonyLinkLib
         virtual std::shared_ptr<FBattery> get_battery_status() = 0;
         virtual std::shared_ptr<FOSVerInfo> get_os_version() = 0;
         virtual bool get_is_external_monitor_connected() = 0;
-        virtual bool get_mouse_keyboard_detected() = 0;
+        virtual bool get_keyboard_detected() = 0;
+        virtual bool get_mouse_detected() = 0;
         virtual bool get_external_controller_detected() = 0;
+        virtual bool get_is_steam_deck_native_resolution() = 0;
         //virtual bool get_is_ethernet_connected() = 0;
         //virtual bool get_is_external_input_detected() = 0;
 

@@ -29,9 +29,13 @@ namespace HarmonyLinkLib
 
         bool get_is_external_monitor_connected() override;
 
-        bool get_mouse_keyboard_detected() override;
+        bool get_keyboard_detected() override;
+
+        bool get_mouse_detected() override;
 
         bool get_external_controller_detected() override;
+
+        bool get_is_steam_deck_native_resolution() override;
         
         // Implementation for other Unix/Linux-specific functions
     };

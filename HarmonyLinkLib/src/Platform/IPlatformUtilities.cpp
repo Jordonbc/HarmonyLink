@@ -76,10 +76,12 @@ namespace HarmonyLinkLib
     bool IPlatformUtilities::is_docked()
     {
         static constexpr uint8_t CHARGING_SCORE = 3;
-        static constexpr uint8_t EXTERNAL_MONITOR_SCORE = 3;
-        static constexpr uint8_t KEYBOARD_DETECTION_SCORE = 2;
-        static constexpr uint8_t CONTROLLER_DETECTION_SCORE = 2;
-        static constexpr uint8_t FINAL_TARGET_DETECTION_SCORE = 6;
+        static constexpr uint8_t EXTERNAL_MONITOR_SCORE = 4;
+        static constexpr uint8_t STEAM_DECK_RESOLUTION_SCORE = 3;
+        static constexpr uint8_t KEYBOARD_DETECTION_SCORE = 1;
+        static constexpr uint8_t MOUSE_DETECTION_SCORE = 2;
+        static constexpr uint8_t CONTROLLER_DETECTION_SCORE = 3;
+        static constexpr uint8_t FINAL_TARGET_DETECTION_SCORE = 9;
 
         
         const std::shared_ptr<FDevice> device = get_device();
@@ -108,9 +110,19 @@ namespace HarmonyLinkLib
             score += EXTERNAL_MONITOR_SCORE;
         }
 
-        if (get_mouse_keyboard_detected())
+        if (get_is_steam_deck_native_resolution())
+        {
+            score += STEAM_DECK_RESOLUTION_SCORE;
+        }
+
+        if (get_keyboard_detected())
         {
             score += KEYBOARD_DETECTION_SCORE;
+        }
+
+        if (get_mouse_detected())
+        {
+            score += MOUSE_DETECTION_SCORE;
         }
 
         if (get_external_controller_detected())

@@ -46,13 +46,25 @@ namespace HarmonyLinkLib
         return false;
     }
 
-    bool UnixUtilities::get_mouse_keyboard_detected()
+    bool UnixUtilities::get_keyboard_detected()
+    {
+        std::wcout << "This feature is not supported on unix-based systems yet.\n";
+        return false;
+    }
+
+    bool UnixUtilities::get_mouse_detected()
     {
         std::wcout << "This feature is not supported on unix-based systems yet.\n";
         return false;
     }
 
     bool UnixUtilities::get_external_controller_detected()
+    {
+        std::wcout << "This feature is not supported on unix-based systems yet.\n";
+        return false;
+    }
+
+    bool UnixUtilities::get_is_steam_deck_native_resolution()
     {
         std::wcout << "This feature is not supported on unix-based systems yet.\n";
         return false;
